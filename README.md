@@ -1,5 +1,5 @@
 # mqtt-broker
-Development of a containerized MQTT message broker. The MQTT protocol provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for Internet of Things messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers.
+Development of a containerized MQTT message broker that can be configured before building the image. The MQTT protocol provides a lightweight method of carrying out messaging using a publish/subscribe model. This makes it suitable for Internet of Things messaging such as with low power sensors or mobile devices such as phones, embedded computers or microcontrollers.
 
 ## Development environment
 The custom docker image has been developed using the official [Eclipse Mosquitto](https://hub.docker.com/_/eclipse-mosquitto) image as a starting point. [Eclipse Mosquitto](https://mosquitto.org/) is an open source (EPL/EDL licensed) message broker that implements the MQTT protocol versions 5.0, 3.1.1 and 3.1.
@@ -25,3 +25,6 @@ To **run the container**, just execute the following command after having create
 docker run -d --name mqtt-broker -p 1883:1883 -p 9001:9001 -v mqtt-broker-config:/mosquitto/config -v mqtt-broker-data:/mosquitto/data mqtt-broker
 
 ```
+
+## Credits
+This custom docker image is developed by Julen Aperribay <japerribay@ideko.es>

@@ -18,6 +18,7 @@ env:
 jobs:
   push_github_package:
 
+    name: Push Docker image to Github Package
     runs-on: ubuntu-latest
     permissions:
       contents: read

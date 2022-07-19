@@ -16,7 +16,7 @@ env:
 
 
 jobs:
-  push_docker_hub:
+  push_github_package:
 
     runs-on: ubuntu-latest
     permissions:
@@ -84,7 +84,7 @@ jobs:
         # This step uses the identity token to provision an ephemeral certificate
         # against the sigstore community Fulcio instance.
         run: cosign sign ${{ steps.meta.outputs.tags }}@${{ steps.build-and-push.outputs.digest }}
-
+        
   push_docker_hub:
 
     name: Push Docker image to Docker Hub
